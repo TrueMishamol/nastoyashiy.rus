@@ -1,0 +1,22 @@
+body {
+	background-color: $purple-black;
+	margin: 0;
+	padding: 0;
+
+	max-width: 100%;
+
+	// overflow-x: hidden;
+}
+
+img {
+	image-rendering: pixelated;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: crisp-edges;
+}
+
+.body_container {
+	width: 100%;
+	max-width: 100%;
+	height: fit-content;
+	overflow: hidden;
+}

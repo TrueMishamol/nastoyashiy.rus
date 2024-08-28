@@ -1,0 +1,67 @@
+.content {
+	>* {
+		margin: var(--64px) 0;
+	}
+}
+
+.header {
+	height: var(--720px);
+
+	background-image: url('img/header-background.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	h1 {
+		// height: fit-content;
+		display: block;
+		text-align: center;
+	}
+
+	h3 {
+		// height: fit-content;
+		display: block;
+		text-align: center;
+
+		margin-top: var(---16px);
+	}
+
+	.button {
+		margin-top: var(--128px);
+	}
+}
+
+.quote-admin {
+	height: var(--256px);
+
+	background-image: url('img/pattern.svg');
+	background-size: var(--1024px);
+	background-position: top;
+	background-repeat: repeat;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	>div {
+		position: absolute;
+		z-index: 1;
+
+		height: var(--100px);
+		background-color: $purple-black;
+		width: 100%;
+	}
+
+	h2 {
+		text-align: center;
+		z-index: 2;
+		margin-bottom: var(--32px);
+	}
+
+
+}

@@ -1,0 +1,37 @@
+@font-face {
+	font-family: 'MishamolPuffedBun2-Regular';
+	src: url('fonts/MishamolPuffedBun2-Regular.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	font-family: 'MishamolPuffedBun2-Regular', sans-serif;
+	font-size: var(--75px);
+	color: $white;
+}
+
+::selection {
+	background: $text-selection;
+	color: $white;
+}
+
+h1 {
+	font-size: var(--256px);
+}
+
+h2 {
+	font-size: 150px;
+}
+
+h3 {
+	font-size: var(--64px);
+}
+
+p {
+	line-height: 90%;
+}
+
+// a {
+// 	font-size: 75px;
+// }
