@@ -566,7 +566,10 @@ p {
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--50px);
   -webkit-user-select: none;
   -ms-user-select: none;
   -moz-user-select: none;
@@ -574,8 +577,8 @@ p {
 }
 .round_icon {
   display: inline-block;
-  width: var(--64px);
-  height: var(--64px);
+  width: var(--100px);
+  height: var(--100px);
   margin: 0;
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
   transition: -webkit-transform 0.3s ease-in-out;

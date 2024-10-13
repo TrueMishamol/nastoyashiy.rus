@@ -97,16 +97,18 @@
 	line-height: normal;
 
 	flex-grow: 0; //^ Self in _container
-	display: block;
+	display: flex;
+	gap: var(--50px);
 
 	-webkit-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
 
 	&_icon {
+
 		display: inline-block;
-		width: var(--64px);
-		height: var(--64px);
+		width: var(--100px);
+		height: var(--100px);
 		margin: 0;
 		transition: transform 0.3s ease-in-out;
 
