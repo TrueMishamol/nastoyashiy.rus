@@ -4,13 +4,13 @@
 	background-color: $white;
 	color: $purple-dark;
 
-	padding: 8px var(--128px) var(--16px);
+	padding: var(--8px) var(--128px) var(--16px);
 	border: none;
 	border-radius: var(--64px);
 
 	cursor: pointer;
 
-	font-size: 75px;
+	font-size: var(--75px);
 	text-align: center;
 	text-decoration: none;
 	white-space: nowrap;

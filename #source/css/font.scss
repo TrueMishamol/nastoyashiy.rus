@@ -21,7 +21,9 @@ h1 {
 }
 
 h2 {
-	font-size: 150px;
+	font-size: var(--150px);
+	font-size: var(--100px);
+	line-height: 60%;
 }
 
 h3 {

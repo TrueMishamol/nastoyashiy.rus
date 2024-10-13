@@ -14,16 +14,22 @@
 .navbar {
 	height: var(--100px);
 
+	@media (max-width: 1050px) {
+		height: calc(var(--100px) * 2);
+		flex-direction: column;
+	}
+
 	display: flex;
 	justify-content: space-between;
+	
 
 	&_logo {
-		height: 100%;
+		height: var(--100px);
 
-		padding-left: 16px;
-		padding-right: 50px;
+		padding-left: var(--16px);
+		padding-right: var(--50px);
 		background: $purple-pastel;
-		border-radius: 0 100px 100px 0;
+		border-radius: 0 var(--100px) var(--100px) 0;
 
 		display: flex;
 		flex-direction: row;
@@ -36,12 +42,12 @@
 		}
 
 		img {
-			padding: 16px;
+			padding: var(--16px);
 		}
 
 		p {
-			font-size: 75px;
-			padding-bottom: 16px;
+			font-size: var(--75px);
+			padding-bottom: var(--16px);
 		}
 
 		&:hover {
@@ -50,7 +56,9 @@
 	}
 
 	.button {
-		font-size: 55px;
+		top: calc(var(--1px) * -18); //! КОСТЫЛЬ
+
+		font-size: var(--55px);
 		height: var(--64px);
 		padding: 0 var(--64px);
 
@@ -74,90 +82,21 @@
 		}
 	}
 
-
-
-// .navbar {
-
-// 	&_burger {
-// 		// position: fixed;
-// 		position: absolute;
-// 		top: var(--32px);
-// 		left: var(--50px);
-// 		z-index: 5;
-
-// 		-webkit-user-select: none;
-// 		-ms-user-select: none;
-// 		user-select: none;
-
-// 		&_logo {
-// 			width: var(--56px);
-// 			height: var(--56px);
-// 			border: none;
-// 			background-color: transparent;
-// 			cursor: pointer;
-// 			transition: transform 0.3s ease-in-out;
-
-// 			&:hover {
-// 				transform: scale(1.1);
-// 			}
-// 		}
-// 	}
-
-
-
-
-// 	&_round {
-// 		flex-grow: 0; //^ Self in _container
-// 		display: block;
-// 		text-align: right;
-// 		margin: var(--32px) var(--50px) var(--32px) auto;
-
-// 		-webkit-user-select: none;
-// 		-ms-user-select: none;
-// 		user-select: none;
-
-// 		&_icon {
-// 			display: inline-block;
-// 			width: var(--64px);
-// 			height: var(--64px);
-// 			margin: 0;
-// 			transition: transform 0.3s ease-in-out;
-
-// 			&:hover {
-// 				transform: scale(1.1);
-// 			}
-
-// 			& img {
-// 				width: 100%;
-// 				height: 100%;
-// 				object-fit: fill;
-// 			}
-// 		}
-
-// 		a {
-// 			display: inline-block;
-// 			width: auto;
-// 			height: auto;
-// 			margin-left: var(--16px);
-// 			padding: 0;
-// 		}
-// 	}
-
-
-
-
 	&_pages {
+		height: var(--100px);
+
 		//^ 1 level
 		display: flex;
 		align-items: center;
 		z-index: 6;
 
 		gap: var(--32px);
-		margin: var(--32px);
+		margin: 0 var(--32px);
 
 		>li {
 			//^ 2 level
 			position: relative;
+			height: var(--64px);
 
 			>ul {
 				position: absolute;
@@ -213,21 +152,21 @@
 			line-height: 70%;
 			text-align: center;
 			color: $purple-pastel;
-			font-size: 55px;
+			font-size: var(--55px);
 		}
 
 
 
 		&_skin {
-			width: 64px;
-			height: 64px;
-			min-width: 64px;
-			min-height: 64px;
+			width: var(--64px);
+			height: var(--64px);
+			min-width: var(--64px);
+			min-height: var(--64px);
 
 			display: block;
 	
 			// background: url(img/skin.png);
-			border-radius: 16px;
+			border-radius: var(--16px);
 
 			position: relative;
 			z-index: 7;
@@ -245,11 +184,11 @@
 
 
 
-			width: 8px;
-			height: 8px;
+			width: var(--8px);
+			height: var(--8px);
 			background-image: url('img/skin.png');
-			background-size: 512px 512px;
-			background-position: -64px -64px;
+			background-size: var(--512px) var(--512px);
+			background-position: var(---64px) var(---64px);
 			background-repeat: no-repeat;
 
 			image-rendering: pixelated;
@@ -268,27 +207,6 @@
 
 
 
-// 	&_container {
-// 		display: block;
-// 	}
 
-
-
-
-// 	@media (min-width: 1100px) {
-// 		&_container {
-// 			padding-left: var(--128px); //^ Burger width
-
-// 			display: flex;
-// 			justify-content: space-between;
-// 			align-items: center;
-// 			flex-direction: row-reverse;
-// 		}
-// 	}
-
-
-
-
-// }
 
 }
