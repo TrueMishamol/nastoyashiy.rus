@@ -10,6 +10,10 @@
 	}
 
 	height: var(--720px);
+	min-height: fit-content;
+
+	padding-left: var(--32px);
+	padding-right: var(--32px);
 
 	background-image: url('img/header-background.png');
 	background-size: cover;
@@ -22,13 +26,11 @@
 	flex-direction: column;
 
 	h1 {
-		// height: fit-content;
 		display: block;
 		text-align: center;
 	}
 
 	h3 {
-		// height: fit-content;
 		display: block;
 		text-align: center;
 
@@ -36,7 +38,8 @@
 	}
 
 	.button {
-		margin-top: var(--128px);
+		margin-top: var(--100px);
+		margin-bottom: var(--50px);
 	}
 }
 

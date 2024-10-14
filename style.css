@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --1px: 1px;
   ---2px: -2px;
@@ -191,6 +192,12 @@ img {
       image-rendering: pixelated;
   image-rendering: -moz-crisp-edges;
   image-rendering: crisp-edges;
+  -webkit-user-drag: none;
+  user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .body_container {
@@ -236,8 +243,6 @@ h2 {
 
 h3 {
   font-size: var(--64px);
-  padding-left: var(--16px);
-  padding-right: var(--16px);
 }
 
 p {
@@ -469,6 +474,11 @@ p {
 
 .header {
   height: var(--720px);
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  padding-left: var(--32px);
+  padding-right: var(--32px);
   background-image: url("img/header-background.png");
   background-size: cover;
   background-position: center;
@@ -502,7 +512,8 @@ p {
   margin-top: var(---16px);
 }
 .header .button {
-  margin-top: var(--128px);
+  margin-top: var(--100px);
+  margin-bottom: var(--50px);
 }
 
 .quote-admin {
@@ -600,4 +611,64 @@ p {
   width: auto;
   height: auto;
   padding: 0;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%); /* Начальная позиция справа */
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%); /* Конечная позиция слева */
+  }
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%); /* Начальная позиция справа */
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%); /* Конечная позиция слева */
+  }
+}
+.marquee {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+.marquee_group, .marquee_duplicate {
+  -webkit-animation: scroll 50s infinite linear;
+          animation: scroll 50s infinite linear;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.marquee_group > *, .marquee_duplicate > * {
+  margin-left: var(--32px);
+}
+.marquee_group > * img, .marquee_duplicate > * img {
+  width: var(--256px);
+  height: var(--256px);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+.marquee_group > * img:hover, .marquee_duplicate > * img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
