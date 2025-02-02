@@ -473,7 +473,7 @@ p {
 }
 
 .header {
-  height: var(--720px);
+  height: 100vh;
   min-height: -webkit-fit-content;
   min-height: -moz-fit-content;
   min-height: fit-content;
@@ -496,11 +496,6 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-@media (max-width: 720px) {
-  .header {
-    height: 100vh;
-  }
 }
 .header h1 {
   display: block;
