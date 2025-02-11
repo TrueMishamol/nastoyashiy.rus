@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/linux-setup/</loc>
+    <loc>http://xn--80aqdngrh1dvc.xn--p1acf/posts/linux-setup/</loc>
     <lastmod>2025-02-06T08:42:11+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>http://xn--80aqdngrh1dvc.xn--p1acf/posts/</loc>
     <lastmod>2025-02-06T08:42:11+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>http://xn--80aqdngrh1dvc.xn--p1acf/</loc>
     <lastmod>2025-02-06T08:42:11+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>http://xn--80aqdngrh1dvc.xn--p1acf/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>http://xn--80aqdngrh1dvc.xn--p1acf/tags/</loc>
   </url>
 </urlset>
