@@ -3,3 +3,4 @@ languageCode = 'ru-RU'
 title = 'Selinity'
 theme = 'selinity'
 
+relativeURLs = true

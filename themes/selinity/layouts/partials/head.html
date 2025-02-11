@@ -38,4 +38,4 @@
 <!--^ CSS ^-->
 {{ $sass := resources.Get "scss/_main.scss" }} <!-- Get SCSS file -->
 {{ $css := $sass | toCSS }} <!-- Compile SCSS to CSS -->
-<link rel="stylesheet" href="{{ $css.Permalink | absURL }}" media="screen"> <!-- Connect compiled CSS -->
+<link rel="stylesheet" href="{{ $css.Permalink | relURL }}" media="screen"> <!-- Connect compiled CSS -->
