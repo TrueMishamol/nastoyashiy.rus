@@ -1,0 +1,5 @@
+baseURL = 'http://xn--80aqdngrh1dvc.xn--p1acf/'
+languageCode = 'ru-RU'
+title = 'Selinity'
+theme = 'selinity'
+
