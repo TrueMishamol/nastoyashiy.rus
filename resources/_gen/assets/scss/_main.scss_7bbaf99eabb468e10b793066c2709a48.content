@@ -301,7 +301,7 @@ body {
     display: block;
     text-align: center; }
   .markdown_paragraph {
-    padding: var(--px32px) var(--px64px);
+    padding: var(--px32px) var(--px100px);
     background-color: #FFFFFF;
     color: #0F0A29; }
     .markdown_paragraph li {
@@ -309,7 +309,7 @@ body {
     .markdown_paragraph > p,
     .markdown_paragraph > ol,
     .markdown_paragraph > ul {
-      padding: var(--px16px) var(--px64px);
+      padding: var(--px16px) 0;
       background-color: #FFFFFF;
       color: #0F0A29; }
       .markdown_paragraph > p > a,
@@ -341,25 +341,21 @@ body {
       color: #0F0A29; }
 
 .heading_admin {
-  height: var(--px256px);
+  width: 100%;
   background-image: url("/images/pattern.svg");
   background-size: var(--px1024px);
   background-position: top;
   background-repeat: repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
+  display: flex; }
   .heading_admin > div {
-    position: absolute;
-    z-index: 1;
-    height: var(--px100px);
     background-color: #0F0A29;
-    width: 100%; }
-  .heading_admin h1 {
-    font-size: var(--px100px);
-    text-align: center;
-    z-index: 2;
-    margin-bottom: var(--px32px); }
+    width: 100%;
+    margin: var(--px64px) 0; }
+    .heading_admin > div h1 {
+      font-size: var(--px100px);
+      line-height: var(--px75px);
+      text-align: center;
+      margin: var(--px4px) 0 var(--px16px); }
 
 .footer .contacts {
   height: var(--px256px);
