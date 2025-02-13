@@ -1,5 +1,61 @@
 (() => {
   // <stdin>
+  function moveImagesAndRemoveEmptyParagraphs() {
+    const markdownDivs = document.querySelectorAll(".markdown");
+    markdownDivs.forEach((markdownDiv) => {
+      if (!markdownDiv) return;
+      const paragraphs = markdownDiv.querySelectorAll("p");
+      paragraphs.forEach((paragraph) => {
+        const images = paragraph.querySelectorAll("img");
+        images.forEach((image) => {
+          paragraph.parentNode.insertBefore(image, paragraph);
+        });
+        if (!paragraph.hasChildNodes()) {
+          paragraph.parentNode.removeChild(paragraph);
+        } else {
+          const textContent = paragraph.textContent.trim();
+          if (textContent === "") {
+            paragraph.parentNode.removeChild(paragraph);
+          }
+        }
+      });
+    });
+  }
+  document.addEventListener("DOMContentLoaded", moveImagesAndRemoveEmptyParagraphs);
+  function groupMarkdownElements() {
+    const markdownDivs = document.querySelectorAll(".markdown");
+    markdownDivs.forEach((markdownDiv) => {
+      if (!markdownDiv) return;
+      const children = Array.from(markdownDiv.children);
+      let group = [];
+      let i = 0;
+      while (i < children.length) {
+        const el = children[i];
+        if (el.matches("p, ol, ul, h3")) {
+          group.push(el);
+          i++;
+        } else {
+          if (group.length > 0) {
+            wrapGroup(markdownDiv, group);
+            group = [];
+          }
+          i++;
+        }
+      }
+      if (group.length > 0) {
+        wrapGroup(markdownDiv, group);
+      }
+    });
+    function wrapGroup(markdownDiv, group) {
+      const wrapper = document.createElement("div");
+      wrapper.classList.add("markdown_paragraph");
+      markdownDiv.insertBefore(wrapper, group[0]);
+      group.forEach((el) => {
+        wrapper.appendChild(el);
+      });
+    }
+  }
+  document.addEventListener("DOMContentLoaded", groupMarkdownElements);
   var buttons = document.querySelectorAll(".popup_button");
   buttons.forEach((button) => {
     button.addEventListener("click", function() {

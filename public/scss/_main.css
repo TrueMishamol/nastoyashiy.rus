@@ -205,11 +205,10 @@ h1 {
   font-size: var(--px64px); }
 
 h2 {
-  font-size: var(--px64px);
-  line-height: 60%; }
+  font-size: var(--px64px); }
 
 h3 {
-  font-size: var(--px64px); }
+  font-size: var(--px50px); }
 
 p {
   font-size: var(--px32px); }
@@ -275,26 +274,54 @@ body {
   display: flex;
   flex-direction: column;
   gap: var(--px32px); }
-  .markdown > p,
-  .markdown ol,
-  .markdown ul {
-    padding: var(--px32px) var(--px64px);
-    background-color: #FFFFFF;
-    color: #0F0A29; }
-    .markdown > p > a,
-    .markdown ol > a,
-    .markdown ul > a {
-      color: #876BFF; }
   .markdown > pre {
     padding: var(--px32px) var(--px64px);
     margin: 0 var(--px64px);
     background-color: #B09CFF;
     color: #FFFFFF;
+    border-radius: var(--px50px);
+    white-space: pre-wrap;
+    /* CSS3 */
+    white-space: -moz-pre-wrap;
+    /* Mozilla, с 1999 года */
+    white-space: -pre-wrap;
+    /* Opera 4-6 */
+    white-space: -o-pre-wrap;
+    /* Opera 7 */
+    word-wrap: break-word;
+    /* Internet Explorer 5.5+ */ }
+  .markdown p > code {
+    padding: var(--px2px) var(--px16px) var(--px4px);
+    background-color: #B09CFF;
+    color: #FFFFFF;
     border-radius: var(--px50px); }
   .markdown > hr {
     margin: var(--px32px); }
+  .markdown > h2 {
+    display: block;
+    text-align: center; }
+  .markdown_paragraph {
+    padding: var(--px32px) var(--px64px);
+    background-color: #FFFFFF;
+    color: #0F0A29; }
+    .markdown_paragraph li {
+      list-style: disc; }
+    .markdown_paragraph > p,
+    .markdown_paragraph > ol,
+    .markdown_paragraph > ul {
+      padding: var(--px16px) var(--px64px);
+      background-color: #FFFFFF;
+      color: #0F0A29; }
+      .markdown_paragraph > p > a,
+      .markdown_paragraph > ol > a,
+      .markdown_paragraph > ul > a {
+        color: #876BFF; }
+    .markdown_paragraph > h3 {
+      padding: 0 var(--px64px) var(--px16px);
+      text-align: center; }
+    .markdown_paragraph > a {
+      color: #876BFF; }
   .markdown_image {
-    margin: var(--px32px);
     width: 100%;
     max-height: 100vh;
     object-fit: contain; }

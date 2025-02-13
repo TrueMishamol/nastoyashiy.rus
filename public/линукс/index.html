@@ -74,7 +74,6 @@
 	</div>
 
 	<p>В данном руководстве по установке и настройке операционной системы Linux мы рассмотрим</p>
-<hr>
 <ul>
 <li>Установка Debian</li>
 <li>Настройка системы</li>
@@ -90,6 +89,9 @@
 	</h1>
 </div>
 
+
+    <h2>Balena Etcher</h2>
+
 <p>Скачайте <a href="https://etcher.balena.io" title="">Balena Etcher</a>
 </p>
 <p><img class="markdown_image" src="20250126112126.png" alt="Pasted image" title="" />
@@ -102,7 +104,6 @@
 
 </p>
 <p>Загрузите на флешку через Balena Etcher</p>
-<p>ё</p>
 <ol>
 <li>Выберите опцию <code>Flash from file</code></li>
 <li>Выберите образ Debian</li>
@@ -111,6 +112,9 @@
 <li>Нажмите <code>Flash!</code></li>
 </ol>
 <p>После окончания загрузки образа на флешку - выключите свой компьютер. Запустите установочную флешку через компьютер через BIOS. Способ выхода в BIOS отличается для каждого компьютера, в зависимости от материнской платы</p>
+
+    <h2>Графическая установка Debian</h2>
+
 <p><img class="markdown_image" src="20250126114321.png" alt="Pasted image" title="" />
 
 </p>
@@ -118,6 +122,9 @@
 <p><img class="markdown_image" src="20250126114358.png" alt="Pasted image" title="" />
 
 </p>
+
+    <h2>Драйвера NVIDIA</h2>
+
 <p>Если при запуске системы у вас отображается чёрный экран - нажмите <code>Ctrl + F2</code> и установите драйвера NVIDIA</p>
 <p>В открывшейся консоли введите</p>
 <pre><code class="language-">sudo nano /etc/apt/sources.list</code></pre><p>Добавьте новую строку с кодом</p>
