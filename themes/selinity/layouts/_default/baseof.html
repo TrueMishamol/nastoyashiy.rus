@@ -17,10 +17,12 @@
 				{{ block "main" . }}{{ end }}
 			</main>
 
+			{{ if not .Params.no_footer }}
 			<footer class="footer">
 				{{ partial "footer.html" . }}
 			</footer>
-
+		  	{{ end }}
+			
 		</div>
 	</div>
 
