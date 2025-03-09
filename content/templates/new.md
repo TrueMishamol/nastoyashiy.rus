@@ -1,6 +1,8 @@
 ---
 title: <% tp.file.title %>
 subtitle: 
+author: Mishamol
+author_avatar: /images/authors/mishamol_linen.png
 date: <%* tR += tp.date.now("YYYY-MM-DDTHH:mm:ssZ") %>
 draft: true
 ---

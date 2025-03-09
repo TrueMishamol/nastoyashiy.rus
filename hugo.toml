@@ -4,3 +4,5 @@ title = 'Selinity'
 theme = 'selinity'
 
 relativeURLs = true
+
+ignorefiles = [ "content/templates/*" ]

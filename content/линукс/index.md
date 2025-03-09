@@ -1,9 +1,12 @@
 ---
 title: Linux
 subtitle: Установка, настройка и использование
+author: Andreway
+author_avatar: /images/authors/andreway_classic.png
 date: 2025-02-06T08:42:11+03:00
 draft: false
 no_footer: true
+no_author: true
 ---
 
 В данном руководстве по установке и настройке операционной системы Linux мы рассмотрим

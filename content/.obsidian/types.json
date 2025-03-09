@@ -4,6 +4,7 @@
     "cssclasses": "multitext",
     "tags": "tags",
     "no_foote": "checkbox",
-    "no_footer": "checkbox"
+    "no_footer": "checkbox",
+    "no_author": "checkbox"
   }
 }

@@ -25,6 +25,10 @@
   --px128px: 128px;
   --px-150px: -150px;
   --px150px: 150px;
+  --px-185px: -185px;
+  --px185px: 185px;
+  --px-212px: -212px;
+  --px212px: 212px;
   --px-256px: -256px;
   --px256px: 256px;
   --px-512px: -512px;
@@ -60,6 +64,8 @@
     --px128px: 17.792vw;
     --px-150px: -20.833vw;
     --px150px: 20.833vw;
+    --px-185px: -25.694vw;
+    --px185px: 25.694vw;
     --px-212px: -29.468vw;
     --px212px: 29.468vw;
     --px-256px: -35.584vw;
@@ -96,6 +102,10 @@
     --px128px: 8.576vw;
     --px-150px: -10vw;
     --px150px: 10vw;
+    --px-185px: -12.333vw;
+    --px185px: 12.333vw;
+    --px-212px: -14.204vw;
+    --px212px: 14.204vw;
     --px-256px: -17.152vw;
     --px256px: 17.152vw;
     --px-512px: -34.133vw;
@@ -244,8 +254,62 @@ body {
   scrollbar-color: #FFFFFF #B09CFF;
   /* цвет бегунка и трека */ }
 
-.header {
+.author {
+  background-color: #FFFFFF;
+  padding: 0 var(--px64px) 0 var(--px50px);
+  width: fit-content;
+  margin: var(--px-150px) auto 0;
+  border-radius: var(--px50px);
+  height: var(--px185px);
+  display: flex;
+  gap: var(--px50px); }
+  .author_avatar {
+    align-self: end;
+    padding-bottom: var(--px16px);
+    margin: 0 var(--px-55px); }
+    .author_avatar img {
+      height: var(--px256px); }
+  .author_text {
+    align-self: center;
+    padding-bottom: var(--px16px);
+    text-align: center; }
+    .author_text h4 {
+      font-size: var(--px75px);
+      color: #B09CFF; }
+    .author_text p {
+      font-size: var(--px55px);
+      color: #5237C5; }
+
+.header_index {
   height: 100vh;
+  min-height: fit-content;
+  padding-left: var(--px32px);
+  padding-right: var(--px32px);
+  background-image: url("/images/header-background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .header_index h1 {
+    font-size: var(--px256px);
+    line-height: var(--px150px);
+    margin: var(--px50px) 0;
+    display: block;
+    text-align: center; }
+  .header_index h3 {
+    font-size: var(--px64px);
+    display: block;
+    text-align: center;
+    margin-top: var(--px-16px); }
+  .header_index .button {
+    margin-top: var(--px100px);
+    margin-bottom: var(--px50px); }
+
+.header {
+  padding: var(--px64px) var(--px32px) var(--px212px);
   min-height: fit-content;
   padding-left: var(--px32px);
   padding-right: var(--px32px);
@@ -259,6 +323,8 @@ body {
   flex-direction: column; }
   .header h1 {
     font-size: var(--px256px);
+    line-height: var(--px150px);
+    margin: var(--px50px) 0;
     display: block;
     text-align: center; }
   .header h3 {
@@ -325,16 +391,6 @@ body {
     width: 100%;
     max-height: 100vh;
     object-fit: contain; }
-  .markdown_author {
-    display: inline-block;
-    background-color: #FFFFFF;
-    color: #5237C5;
-    padding: var(--px8px) var(--px128px) var(--px8px);
-    border: none;
-    border-radius: var(--px64px);
-    text-align: center;
-    text-decoration: none;
-    white-space: nowrap; }
   .markdown_paragraph {
     background-color: #FFFFFF; }
     .markdown_paragraph p {
@@ -357,16 +413,44 @@ body {
       text-align: center;
       margin: var(--px4px) 0 var(--px16px); }
 
-.footer .contacts {
-  height: var(--px256px);
-  background-image: url("/images/header-background.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.footer {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; }
+  flex-direction: column;
+  gap: var(--px50px);
+  margin-bottom: var(--px32px); }
+  .footer_contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+  .footer_divider {
+    height: var(--px55px);
+    background-image: url("/images/pattern.svg"); }
+  .footer_text {
+    padding: 0 var(--px50px); }
+    .footer_text p {
+      color: #FFFFFF; }
+  .footer_links {
+    padding: 0 var(--px50px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; }
+    @media (max-width: 850px) {
+      .footer_links {
+        grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1200px) {
+      .footer_links {
+        grid-template-columns: repeat(4, 1fr); } }
+    .footer_links a {
+      color: #B09CFF; }
+  .footer_logo {
+    color: #FFFFFF;
+    text-align: center; }
+    .footer_logo p {
+      font-size: var(--px55px); }
+    .footer_logo img {
+      height: var(--px64px);
+      margin-bottom: var(--px8px); }
 
 .button {
   display: inline-block;

@@ -6,9 +6,9 @@
 
 <div class="markdown">
 
-	<div class="markdown_author">
-		<p>{{ .Date.Format "2006-01-02" }}</p>
-	</div>
+	{{ if not .Params.no_author }}
+		{{ partial "author.html" . }}
+	{{ end }}
 
 	{{ .Content }}
 
